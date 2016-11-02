@@ -1,0 +1,50 @@
+1. Courses
+id
+name of course
+level
+description
+time
+programm
+credit
+number of students
+
+
+2. Lecturers
+id
+first name
+maddle name
+last name
+users_id
+courses
+
+3. courses_lecturers 
+id
+lecturer_id
+courses_id
+
+4. users
+id
+first name
+middle name
+last name
+login
+password
+
+5. students
+id
+first name
+maddle name
+last name
+users_id
+year of studying 
+9.10-10.30
+11.00-12.30
+13.00-14.30
+14.50-16.20
+16.40-18.10
+18.30-20.00
+
+6. students_courses
+id
+studen_id
+course_id
