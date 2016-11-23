@@ -1,0 +1,232 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<title>Список курсов</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<style type="text/css">
+#modal_form {
+border-radius: 5px;
+border: 3px #000 solid;
+background: #fff;
+position: fixed;
+top: 45%;
+left: 20%;
+right: 20%;
+margin-top: -150px;
+margin-left: -150px
+display: none;
+opacity: 0;
+z-index: 5;
+padding: 20px 10px;
+}
+
+#modal_form #modal_close {
+width: 21px;
+height: 21px;
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+display: block;
+}
+
+#overlay {
+z-index:3;
+position:fixed;
+background-color:#000;
+opacity:0.8;
+-moz-opacity:0.8;
+filter:alpha(opacity=80);
+width:100%;
+height:100%;
+top:0;
+left:0;
+cursor:pointer;
+display:none;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('a#go').click( function(event){
+event.preventDefault();
+$('#overlay').fadeIn(400,
+function(){
+$('#modal_form')
+.css('display', 'block')
+.animate({opacity: 1, top: '50%'}, 200);
+});
+});
+$('#modal_close, #overlay').click( function(){
+$('#modal_form')
+.animate({opacity: 0, top: '45%'}, 200,
+function(){
+$(this).css('display', 'none');
+$('#overlay').fadeOut(400);
+}
+);
+});
+});
+</script>
+</head>
+<body>
+<div class="page-container">
+<div class="page-container-inner">
+<h1>Список курсов</h1>
+
+<style type="text/css">
+div.page-container {
+max-width: 75%;
+min-width: 960px;
+margin: 0 auto;
+padding: 0;
+}
+
+div.page-container-inner {
+min-width: 960px;
+max-width: 1920px;
+margin: 0 auto;
+padding: 0;
+}
+table, td {
+border: solid 1px black;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td {
+padding: 8px;
+}
+.s {
+background: #d0eaf9;
+}
+#rows, #cols {
+width: 20px;
+}
+td div {
+outline: none;
+}
+#tableWrap {
+padding: 10px;
+}
+input[type="button"] {
+width: 120px;
+}
+body
+{
+color: #999999;
+font: 1em/1.6em Times New Roman;
+}
+</div>
+</div>
+</style>
+
+<table>
+<tr>
+<td>Название курса</td>
+<td>Преподаватель</td>
+<td>Профиль</td>
+<td>Уровень<br></td>
+<td>Кредиты<br></td>
+<td>Время занятий</td>
+</tr>
+<tr>
+<td><p><a href="#" id="go">Абстрактная алгебра</a></p></td>
+<td><p>Жукова Алёна Михайловна</p></td>
+<td><p>CMSC</p></td>
+<td>E300</td>
+<td><p>6/3</p></td>
+<td><p>Расписание (жмак под календарь)</p></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Кнопка(жмак!)</td>
+</tr>
+</table>
+
+<div id="modal_form">
+<span id="modal_close">X</span>
+<form action="" method="post">
+<h2>Абстрактная алгебра</h2>
+<h5>Преподаватель: Жукова Алёна Михайловна</h5>
+<p> Абстрактная алгебра является одним из наиболее существенных инструментов современной математики наравне с топологией и математическом анализом. Более того, алгебраические методы давно проникли в различные разделы математики: ту же топологию, комбинаторику, теорию динамических систем, геометрию и компьютерные науки. Вместе с тем в данном курсе даются не только абстрактные понятия и теоремы,
+здесь также рассматриваются различные приложения алгебраических структур. Этот курс будет интересен всем студентам, интересующимся математикой.</p>
+</form>
+</div>
+<div id="overlay"></div>
+
+</body>
+</html>
